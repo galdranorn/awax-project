@@ -3,8 +3,107 @@
   font-family: Montserrat;
 }
 
+.container {
+  width: 80%;
+}
+
+.theme-button {
+  background: #F9D435;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  border: 0px;
+  color: white;
+  margin: 10px;
+}
+
+header {
+  background: black;
+}
+
+header nav {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  width: 100%;
+  height: 70px;
+  background: black;
+  font-size: 12px;
+  font-family: Montserrat;
+}
+
+header nav .logo {
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+
+header nav ul {
+  margin-bottom: 0;
+  height: 70px;
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  height: 70px;
+  display: inline-block;
+}
+
+header nav ul li a {
+  padding: 0 5px;
+  line-height: 65px;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: .2s ease-out;
+}
+
+header nav ul li a:hover {
+  border-bottom: 4px solid #F9D435;
+  color: #F9D435;
+}
+
 header .hero {
   background-image: url("../images/hero.png");
   background-size: cover;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  min-height: 300px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  text-align: center;
+}
+
+header .hero h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+header .hero .slogan1 {
+  color: white;
+}
+
+header .hero .slogan2 {
+  color: #F9D435;
+}
+
+header .hero h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 25px;
 }
 /*# sourceMappingURL=style.css.map */
