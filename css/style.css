@@ -288,4 +288,90 @@ header nav ul li:hover a {
 .our-team .team-card div a span:hover {
   color: black;
 }
+
+.happy-clients {
+  text-align: center;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cccccc;
+}
+
+.happy-clients h3 {
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+}
+
+.happy-clients h4 {
+  font-weight: 600px;
+  font-size: 16px;
+}
+
+.happy-clients .opinion {
+  background: #f3f3f3;
+  border-bottom: 1px solid #cccccc;
+}
+
+.logos {
+  padding: 40px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.logos .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+}
+
+.logos img {
+  height: 30px;
+}
+
+.price {
+  background: #dddddd;
+  text-align: center;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+.price .price-card {
+  padding: 10px;
+}
+
+.price .price-card h3, .price .price-card h5 {
+  text-transform: uppercase;
+}
+
+.price .price-card h3 {
+  font-size: 18px;
+  font-weight: 600px;
+}
+
+.price .price-card h4 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.price .price-card h5 {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 0;
+}
+
+.price .price-card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.price .price-card ul li {
+  padding: 3px;
+  font-size: 10px;
+  color: #aaaaaa;
+}
+
+.price .price-card div {
+  background: white;
+  padding: 10px 3px;
+  border-radius: 3px;
+}
 /*# sourceMappingURL=style.css.map */
