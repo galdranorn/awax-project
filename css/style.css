@@ -3,8 +3,38 @@
   font-family: Montserrat;
 }
 
+@keyframes swing {
+  15% {
+    transform: translateX(5px);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  65% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .container {
   width: 80%;
+}
+
+main {
+  position: relative;
+  top: 70px;
+}
+
+section {
+  padding: 50px 30px;
 }
 
 .theme-button {
@@ -18,33 +48,58 @@
   margin: 10px;
 }
 
+.theme-button:hover {
+  animation: swing 1s ease-out;
+}
+
+.section-name, .section-description {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section-name {
+  color: black;
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  color: #aaaaaa;
+  font-size: 12px;
+  margin-top: 0;
+}
+
 header {
   background: black;
 }
 
 header nav {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 70px;
+  background: black;
+  font-size: 11px;
+  font-family: Montserrat;
+}
+
+header nav ul {
   position: relative;
+  margin-bottom: 0;
+  height: 70px;
+  list-style-type: none;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
       justify-content: flex-end;
-  width: 100%;
-  height: 70px;
-  background: black;
-  font-size: 12px;
-  font-family: Montserrat;
 }
 
-header nav .logo {
+header nav ul .logo {
   position: absolute;
-  top: 12px;
-  left: 0;
-}
-
-header nav ul {
-  margin-bottom: 0;
-  height: 70px;
-  list-style-type: none;
+  top: 10px;
+  left: 10px;
 }
 
 header nav ul li {
@@ -54,6 +109,7 @@ header nav ul li {
       align-items: stretch;
   height: 70px;
   display: inline-block;
+  transition: .2s ease-out;
 }
 
 header nav ul li a {
@@ -61,23 +117,25 @@ header nav ul li a {
   line-height: 65px;
   text-decoration: none;
   color: white;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
   transition: .2s ease-out;
 }
 
-header nav ul li a:hover {
+header nav ul li:hover {
   border-bottom: 4px solid #F9D435;
-  color: #F9D435;
 }
 
-header .hero {
+header nav ul li:hover a {
+  color: #F9D435;
+  text-decoration: none;
+}
+
+.hero {
   background-image: url("../images/hero.png");
   background-size: cover;
-  position: absolute;
-  top: 70px;
   width: 100%;
-  min-height: 300px;
+  min-height: 400px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -85,25 +143,149 @@ header .hero {
   -ms-flex-pack: center;
       justify-content: center;
   text-align: center;
+  padding: 30px;
 }
 
-header .hero h1 {
+.hero h1 {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 50px;
 }
 
-header .hero .slogan1 {
+.hero .slogan1 {
   color: white;
 }
 
-header .hero .slogan2 {
+.hero .slogan2 {
   color: #F9D435;
 }
 
-header .hero h2 {
+.hero h2 {
   color: white;
   text-transform: uppercase;
   font-size: 25px;
+}
+
+.services {
+  background: black;
+}
+
+.services .section-name {
+  color: white;
+}
+
+.services .row {
+  border-right: 1px solid #aaaaaa;
+}
+
+.services .service {
+  padding: 5px;
+  text-align: center;
+  border-left: 1px solid #aaaaaa;
+  height: 100%;
+}
+
+.services .service a {
+  text-decoration: none;
+}
+
+.services .service a img {
+  height: 55px;
+}
+
+.services .service a h3 {
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: .2s ease-out;
+}
+
+.services .service a p {
+  color: #aaaaaa;
+  font-size: 12px;
+}
+
+.services .service a:hover h3 {
+  color: #F9D435;
+}
+
+.services .service a:hover img {
+  animation: swing 1s ease-out;
+}
+
+.our-projects {
+  text-align: center;
+}
+
+.our-projects .row {
+  padding: 1px;
+}
+
+.our-projects .projects-menu {
+  padding: 5px 20px;
+  background: #eeeeee;
+  width: 60%;
+  min-width: 500px;
+  margin: 20px auto;
+  border-radius: 60px;
+  border: 1px solid #cccccc;
+}
+
+.our-projects .projects-menu button {
+  background: transparent;
+  border: none;
+  border-right: 1px solid #cccccc;
+  margin: 0;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  transition: .2s ease-out;
+}
+
+.our-projects .projects-menu button:hover {
+  background: #dddddd;
+}
+
+.our-projects .projects-menu .no-border {
+  border: none;
+}
+
+.our-projects .theme-button {
+  margin: 20px;
+}
+
+.our-team {
+  text-align: center;
+  background: url("../images/team/team-bg.png");
+  background-size: cover;
+}
+
+.our-team .section-name {
+  color: white;
+}
+
+.our-team .team-card {
+  padding: 10px;
+}
+
+.our-team .team-card div {
+  background: white;
+  padding: 30px 10px 20px 10px;
+  border-radius: 3px;
+}
+
+.our-team .team-card div a span {
+  width: 25px;
+  height: 25px;
+  background: #cccccc;
+  border-radius: 50%;
+  padding-top: 6px;
+  color: white;
+}
+
+.our-team .team-card div a span:hover {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
