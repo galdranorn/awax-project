@@ -638,7 +638,7 @@ header nav ul li:hover a {
 .map {
   min-height: 400px;
   margin-bottom: 70px;
-  background: url(images/map.png);
+  background: url("../images/map.png");
   background-size: cover;
   background-position: center;
 }
