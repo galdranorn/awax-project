@@ -81,6 +81,19 @@ section {
 // header
 
 header {
+    .menuSmall {
+        display: none;
+        span {
+            font-size: 30px;
+            color: white;
+            position: absolute;
+            top: 10px;
+            padding: 10px;
+            margin: 0 20px;
+            li:hover {border: none;}
+            li a:hover {text-decoration: none;}
+        }
+    }
     background: black;
     nav {
         position: fixed;
@@ -127,6 +140,7 @@ header {
                 }
             }
         }
+        
     }  
 }
 
@@ -511,7 +525,7 @@ header {
 .map {
     min-height: 400px;
     margin-bottom: 70px;
-    background: url(/images/map.png);
+    background: url(images/map.png);
     background-size: cover;
     background-position: center;
     .data {
@@ -597,5 +611,30 @@ footer {
         button {
             margin-top: 20px;  
         }
+    }
+}
+
+
+
+@media (max-width: 960px) {
+    header {
+        .menuBig {display: none;}
+        .menuSmall {
+            padding: 10px;
+            display: block;
+            ul {
+                width: 100%;
+                background: black;
+                    a {
+                    color: white;
+                    }
+                }           
+        &:hover {
+                span {
+                    color: $themeColour;
+                }
+            }
+        }
+        nav ul .logo {left: 30px;}
     }
 }

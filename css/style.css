@@ -98,6 +98,27 @@ header {
   background: black;
 }
 
+header .menuSmall {
+  display: none;
+}
+
+header .menuSmall span {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+header .menuSmall span li:hover {
+  border: none;
+}
+
+header .menuSmall span li a:hover {
+  text-decoration: none;
+}
+
 header nav {
   position: fixed;
   top: 0;
@@ -617,7 +638,7 @@ header nav ul li:hover a {
 .map {
   min-height: 400px;
   margin-bottom: 70px;
-  background: url(/images/map.png);
+  background: url(images/map.png);
   background-size: cover;
   background-position: center;
 }
@@ -709,5 +730,28 @@ footer .subscribe input {
 
 footer .subscribe button {
   margin-top: 20px;
+}
+
+@media (max-width: 960px) {
+  header .menuBig {
+    display: none;
+  }
+  header .menuSmall {
+    padding: 10px;
+    display: block;
+  }
+  header .menuSmall ul {
+    width: 100%;
+    background: black;
+  }
+  header .menuSmall ul a {
+    color: white;
+  }
+  header .menuSmall:hover span {
+    color: #b88b58;
+  }
+  header nav ul .logo {
+    left: 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
