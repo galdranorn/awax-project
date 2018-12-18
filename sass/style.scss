@@ -25,10 +25,13 @@ $themeColour: #b88b58;
 $grayBackground: #f7f7f7;
 
 // global styles 
-.container {width: 80%;}
+.container {
+    width: 80%;
+    max-width: 1110px;
+}
 main {
     position: relative;
-    top: 70px;
+    top: 100px;
 }
 section {
     padding: 50px 30px;
@@ -100,31 +103,32 @@ header {
         top: 0;
         z-index: 3;        
         width: 100%;
-        height: 70px;
+        height: 100px;
         background: black;
-        font-size: 11px;
+        font-size: 14px;
         font-family: Montserrat;
         ul {
         position: relative;
         margin-bottom: 0;
-        height: 70px;
+        height: 100px;
         list-style-type: none;
         display: flex;
         justify-content: flex-end;
             .logo {
                 position: absolute;
-                top: 10px;
+                top: 25px;
                 left: 10px;
             }
             li {
                 display: flex;
                 align-items: stretch;
-                height: 70px;
+                height: 100px;
                 display: inline-block;
+                margin: 0 10px;
                 transition: .2s ease-out;
                 a {
                     padding: 0 5px;
-                    line-height: 65px;
+                    line-height: 95px;
                     text-decoration: none;
                     color: white;
                     font-weight: 700;
@@ -616,6 +620,19 @@ footer {
 
 
 
+// RWD MENU
+@media (max-width: 1400px) {
+    header nav ul li {margin: 0 5px;}
+}
+@media (max-width: 1300px) {
+    header nav {font-size: 12px;} 
+}
+@media (max-width: 1200px) {
+    header nav {
+        font-size: 11px;
+        ul li a {padding: 0;}
+    } 
+}
 @media (max-width: 960px) {
     header {
         .menuBig {display: none;}
