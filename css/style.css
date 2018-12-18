@@ -30,8 +30,7 @@
 }
 
 main {
-  position: relative;
-  top: 100px;
+  padding-top: 100px;
 }
 
 section {
@@ -235,14 +234,18 @@ header nav ul li:hover a {
   color: white;
 }
 
+.services .section-description {
+  margin-bottom: 30px;
+}
+
 .services .row {
-  border-right: 1px solid #aaaaaa;
+  border-right: 1px solid #111111;
 }
 
 .services .service {
   padding: 5px;
   text-align: center;
-  border-left: 1px solid #aaaaaa;
+  border-left: 1px solid #111111;
   height: 100%;
 }
 
