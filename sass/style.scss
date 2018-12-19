@@ -363,7 +363,14 @@ header {
         font-size: 30px;
         margin: 10px;
     }
-    .dots span {margin: 3px;}
+    .dots span {
+        margin: 3px;
+    }
+    blockquote {
+        width: 50%;
+        border: none;
+        margin: 0 auto;
+    }
 }
 
 .logos {
@@ -531,11 +538,25 @@ header {
             height: 29px;
             color: white
         }
-        .fa-twitter {background: #00aced;}
-        .fa-linkedin {background: #007bb5;}
-        .fa-facebook {background: #3b5998}
-        .fa-google-plus {background: #DD4B39}
-        .fa-pinterest {background: #cb2027;}
+        .fa-twitter {
+            background: #00aced;
+            padding-left: 7px;
+        }
+        .fa-linkedin {
+            background: #007bb5;
+        }
+        .fa-facebook {
+            background: #3b5998;
+            padding-left: 10px;
+            padding-top: 9px;
+        }
+        .fa-google-plus {
+            background: #DD4B39;
+            padding-left: 5px;
+        }
+        .fa-pinterest {
+            background: #cb2027;
+        }
     }
 }
 
