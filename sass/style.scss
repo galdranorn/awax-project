@@ -244,16 +244,13 @@ header {
 
 .our-projects {
     text-align: center;
-    .row {
-        padding: 1px;
-    }
     .projects-menu {
         padding: 0 20px;
         background: #aeaeae;
         width: 60%;
         height: 60px;
         font-weight: 600;
-        min-width: 700px;
+        min-width: 650px;
         margin: 30px auto;
         border-radius: 60px;
         border: 1px solid #cccccc;
@@ -276,6 +273,28 @@ header {
             }
             .no-border {
                 border: none;
+            }
+        }
+    }
+    .projects-thumbnails {
+        .project {
+            position: relative;
+            padding: 10px;
+            .hover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                color: #fff;
+                padding: 30px 20px;
+                font-size: 14px;
+                opacity: 0;
+                transition: 1;
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -675,5 +694,34 @@ footer {
             }
         }
         nav ul .logo {left: 30px;}
+    }
+}
+
+// RWD OUR PROJECTS
+
+@media (max-width: 1400px) {
+    .our-projects .thumbnails-container {
+        width: 100%;
+    }
+}
+@media (max-width: 1200px) {
+    .our-projects .thumbnails-container {
+        width: 550px;
+    }
+}
+@media (max-width: 960px) {
+    .our-projects {
+        .container {
+            width: 100%;
+        }
+        .projects-menu {
+            font-size: 12px;
+            min-width: 550px;
+        }
+    }
+}
+@media (max-width: 660px) {
+    .our-projects .projects-menu {
+        display: none;
     }
 }
