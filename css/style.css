@@ -29,6 +29,10 @@
   max-width: 1110px;
 }
 
+body {
+  width: 100vw;
+}
+
 main {
   padding-top: 100px;
 }
@@ -436,12 +440,17 @@ header nav ul li:hover a {
       justify-content: space-evenly;
 }
 
-.logos img {
-  height: 30px;
+.logos .logo {
+  text-align: center;
+}
+
+.logos .logo img {
+  width: 100%;
+  max-width: 110px;
   transition: transform .2s;
 }
 
-.logos img:hover {
+.logos .logo img:hover {
   transform: scale(1.2);
 }
 
@@ -505,6 +514,10 @@ header nav ul li:hover a {
 
 .premium {
   text-align: center;
+}
+
+.premium img {
+  max-width: 100%;
 }
 
 .premium .premium-point {
@@ -677,7 +690,6 @@ header nav ul li:hover a {
 
 .map {
   min-height: 400px;
-  margin-bottom: 70px;
   background: url("../images/map.png");
   background-size: cover;
   background-position: center;
@@ -776,6 +788,9 @@ footer .subscribe button {
   header nav ul li {
     margin: 0 5px;
   }
+  .our-projects .thumbnails-container {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -791,9 +806,15 @@ footer .subscribe button {
   header nav ul li a {
     padding: 0;
   }
+  .our-projects .thumbnails-container {
+    width: 550px;
+  }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 986px) {
+  main {
+    padding-top: 0;
+  }
   header .menuBig {
     display: none;
   }
@@ -814,21 +835,6 @@ footer .subscribe button {
   header nav ul .logo {
     left: 30px;
   }
-}
-
-@media (max-width: 1400px) {
-  .our-projects .thumbnails-container {
-    width: 100%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .our-projects .thumbnails-container {
-    width: 550px;
-  }
-}
-
-@media (max-width: 960px) {
   .our-projects .container {
     width: 100%;
   }
@@ -836,11 +842,90 @@ footer .subscribe button {
     font-size: 12px;
     min-width: 550px;
   }
+  .tell-about-us {
+    padding: 20px 0;
+  }
+  .tell-about-us .container {
+    width: 100%;
+  }
+  .tell-about-us .section-description {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .tell-about-us .description span {
+    display: none;
+  }
+  .tell-about-us .social {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    float: none;
+  }
+  .tell-about-us .social div {
+    margin: 2px;
+    text-align: center;
+  }
+  .tell-about-us .social span {
+    margin: 5px 15px;
+    display: block;
+    font-size: 15px;
+  }
+  .happy-clients blockquote {
+    width: 80%;
+  }
+  footer {
+    text-align: center;
+  }
+  footer h1 {
+    display: none;
+  }
+  footer .social {
+    padding: 10px 0;
+  }
+  footer .subscribe .content {
+    padding: 5px;
+    margin-bottom: 30px;
+    height: 80px;
+  }
 }
 
 @media (max-width: 660px) {
+  .container {
+    width: 100%;
+  }
+  .hero h1 {
+    font-size: 35px;
+  }
   .our-projects .projects-menu {
     display: none;
+  }
+  .tell-about-us .social span {
+    margin: 5px;
+  }
+  .happy-clients blockquote {
+    width: 100%;
+    font-size: 12px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero h2 {
+    font-size: 15px;
+  }
+  .contact-us .half {
+    width: 90%;
+    margin: 0 13px;
+  }
+  .map .data div {
+    font-size: 11px;
+  }
+  footer .subscribe .content {
+    height: 100px;
   }
 }
 /*# sourceMappingURL=style.css.map */

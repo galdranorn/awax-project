@@ -29,6 +29,9 @@ $grayBackground: #f7f7f7;
     width: 80%;
     max-width: 1110px;
 }
+body {
+    width: 100vw;
+}
 main {
     padding-top: 100px;
 }
@@ -380,11 +383,15 @@ header {
         display: flex;
         justify-content: space-evenly;
     }
-    img {
-        height: 30px;
-        transition: transform .2s;
-        &:hover {
-            transform: scale(1.2);
+    .logo {
+        text-align: center;
+        img {
+            width: 100%;
+            max-width: 110px;
+            transition: transform .2s;
+            &:hover {
+                transform: scale(1.2);
+            }
         }
     }
 
@@ -442,6 +449,9 @@ header {
 
 .premium {
     text-align: center;
+    img {
+        max-width: 100%;
+    }
     .premium-point {
         text-align: left;
         position: relative;
@@ -591,7 +601,6 @@ header {
 
 .map {
     min-height: 400px;
-    margin-bottom: 70px;
     background: url('../images/map.png');
     background-size: cover;
     background-position: center;
@@ -682,20 +691,41 @@ footer {
 }
 
 
-// RWD MENU
+// ------------------------ RWD
+
 @media (max-width: 1400px) {
-    header nav ul li {margin: 0 5px;}
+// menu
+    header nav ul li {
+        margin: 0 5px;
+    }
+// our projects
+    .our-projects .thumbnails-container {
+        width: 100%;
+    }
 }
 @media (max-width: 1300px) {
-    header nav {font-size: 12px;} 
+// menu
+    header nav {
+        font-size: 12px;
+} 
 }
 @media (max-width: 1200px) {
+// menu
     header nav {
         font-size: 11px;
         ul li a {padding: 0;}
     } 
+// our projects 
+    .our-projects .thumbnails-container {
+        width: 550px;
+    }
 }
-@media (max-width: 960px) {
+@media (max-width: 986px) {
+// global 
+    main {
+        padding-top: 0;
+    }
+// menu
     header {
         .menuBig {display: none;}
         .menuSmall {
@@ -716,21 +746,7 @@ footer {
         }
         nav ul .logo {left: 30px;}
     }
-}
-
-// RWD OUR PROJECTS
-
-@media (max-width: 1400px) {
-    .our-projects .thumbnails-container {
-        width: 100%;
-    }
-}
-@media (max-width: 1200px) {
-    .our-projects .thumbnails-container {
-        width: 550px;
-    }
-}
-@media (max-width: 960px) {
+// our projects 
     .our-projects {
         .container {
             width: 100%;
@@ -740,9 +756,100 @@ footer {
             min-width: 550px;
         }
     }
+// tell about us
+    .tell-about-us {
+        padding: 20px 0;
+        .container {
+            width: 100%;
+        }
+        .section-description {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .description span {
+            display: none;
+        }
+        .social {
+            display: flex;
+            justify-content: center;
+            float: none;
+            div {
+                margin: 2px;
+                text-align: center;
+            }
+            span {
+                margin: 5px 15px;
+                display: block;
+                font-size: 15px;
+            }
+        }
+    }
+// happy clients 
+    .happy-clients blockquote {
+        width: 80%;
+    }
+// footer
+    footer {
+        text-align: center;
+        h1 {
+            display: none;
+        }
+        .social {
+            padding: 10px 0;
+        }
+        .subscribe .content {
+            padding: 5px;
+            margin-bottom: 30px;
+            height: 80px;
+        }
+    }
 }
+
 @media (max-width: 660px) {
+// global
+    .container {
+        width: 100%;
+    }
+//hero
+    .hero h1 {
+    font-size: 35px;
+    }
+
+// our projects
     .our-projects .projects-menu {
         display: none;
     }
+
+// tell about us
+    .tell-about-us .social span {
+        margin: 5px;
+    }
+// happy clients
+    .happy-clients blockquote {
+        width: 100%;
+        font-size: 12px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 380px) {
+//hero
+    .hero {
+        h1 {font-size: 30px;}
+        h2 {font-size: 15px;}
+    }
+// contact us
+    .contact-us .half {
+        width: 90%;
+        margin: 0 13px;
+    }
+// map
+    .map .data div {
+        font-size: 11px;
+    }
+// footer
+footer .subscribe .content {
+        height: 100px;
+    }
+
 }
