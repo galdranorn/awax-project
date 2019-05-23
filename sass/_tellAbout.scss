@@ -1,0 +1,96 @@
+.tell-about-us {
+    border-bottom: 1px solid #cccccc;
+    padding: 20px 30px;
+    .section-description {
+        text-align: right;
+        margin: 20px 10px;
+    }
+    .description {
+        position: relative;
+        span {
+            font-size: 30px;
+            color: #aaaaaa;
+            position: absolute;
+            top: 10px;
+            left: calc(50% - 30px);
+        }
+    }
+    .social {
+        display: flex;
+        justify-content: center;
+        float: left;
+        
+        div {
+            margin: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #aaaaaa;
+        }
+        span {
+            margin-right: 10px;
+            font-size: 15px;
+            background: gray;
+            padding: 8px;
+            border-radius: 50%;
+            width: 29px;
+            height: 29px;
+            color: white
+        }
+        .fa-twitter {
+            background: #00aced;
+            padding-left: 7px;
+        }
+        .fa-linkedin {
+            background: #007bb5;
+        }
+        .fa-facebook {
+            background: #3b5998;
+            padding-left: 10px;
+            padding-top: 9px;
+        }
+        .fa-google-plus {
+            background: #DD4B39;
+            padding-left: 5px;
+        }
+        .fa-pinterest {
+            background: #cb2027;
+        }
+    }
+}
+
+@media (max-width: 986px) {
+    .tell-about-us {
+        padding: 20px 0;
+        .container {
+            width: 100%;
+        }
+        .section-description {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .description span {
+            display: none;
+        }
+        .social {
+            display: flex;
+            justify-content: center;
+            float: none;
+            div {
+                margin: 2px;
+                text-align: center;
+            }
+            span {
+                margin: 5px 15px;
+                display: block;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .tell-about-us .social span {
+        margin: 5px;
+    }
+}
+

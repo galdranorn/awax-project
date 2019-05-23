@@ -1,0 +1,31 @@
+.contact-us {
+    text-align: center;
+    input {
+        text-transform: uppercase;
+        padding: 20px 10px;
+        border: none;
+        border-bottom: 1px solid #cccccc;
+
+    }
+    .message {margin-top: 40px;}
+    .subject {margin-top: 10px;}
+    .subject, .message {
+        width: 90%;
+        margin: 0 5%;
+    }
+    .half {
+        width: 44%;
+        margin: 0 1%;
+    }
+    .theme-button {
+        margin: 40px;
+    }
+    
+}
+
+@media (max-width: 380px) {
+    .contact-us .half {
+        width: 90%;
+        margin: 0 13px;
+    }
+}

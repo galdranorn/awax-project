@@ -1,0 +1,81 @@
+footer {
+    min-height: 200px;
+    background: black;
+    padding: 20px 0;
+    h1 {
+        position: absolute;
+        bottom: -140px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 10px;
+    }
+    p {
+        color: #777777;
+        font-size: 10px;
+        text-align: justify;
+        line-height: 18px;
+    }
+    .social {
+        a {
+            span {
+                width: 25px;
+                height: 25px;
+                background: #333333;
+                border-radius: 50%;
+                padding: 6px 0 0 6px;
+                color: white;
+                transition: transform .2s;
+                &:hover {
+                    background: $themeColour;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+    .subscribe {
+        padding: 0 20px;
+        text-align: center;
+        .content {
+            background: #333333;
+            padding: 30px 20px;
+            height: 160px;
+        }
+        input {
+            text-align: center;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #aaaaaa;
+            background: transparent;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 10px;
+        }
+        button {
+            margin-top: 20px;  
+        }
+    }
+}
+
+@media (max-width: 986px) {
+    footer {
+        text-align: center;
+        h1 {
+            display: none;
+        }
+        .social {
+            padding: 10px 0;
+        }
+        .subscribe .content {
+            padding: 5px;
+            margin-bottom: 30px;
+            height: 80px;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    footer .subscribe .content {
+        height: 100px;
+    }
+}

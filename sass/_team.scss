@@ -1,0 +1,29 @@
+.our-team {
+    text-align: center;
+    background: url('../images/team/team-bg.png');
+    background-size: cover;
+    .section-name{color: white;}
+    .team-card {
+        padding: 10px;
+        div {
+            background: white;
+            padding: 30px 10px 20px 10px;
+            border-radius: 3px;
+            a {
+                span {
+                    width: 25px;
+                    height: 25px;
+                    background: #cccccc;
+                    border-radius: 50%;
+                    padding-top: 6px;
+                    color: white;
+                    transition: transform .2s;
+                    &:hover {
+                        background: $themeColour;
+                        transform: scale(1.2);
+                    }
+                }
+            }    
+        }
+    }
+}

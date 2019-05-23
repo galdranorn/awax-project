@@ -1,0 +1,71 @@
+.happy-clients {
+    text-align: center;
+    background: #f3f3f3;
+    border-bottom: 1px solid #cccccc;
+    h3 {
+        font-weight: 700;
+        font-size: 20px;
+        color: black;
+    }
+    h4 {
+        font-weight: 600px;
+        font-size: 16px;
+    }
+    img {
+        margin: 20px auto;
+    }
+    .opinion {
+        background: #f3f3f3;
+        border-bottom: 1px solid #cccccc;
+        margin: 10px;
+    }
+    span {
+        color: gray;
+        font-size: 30px;
+        margin: 10px;
+    }
+    .dots span {
+        margin: 3px;
+    }
+    blockquote {
+        width: 50%;
+        border: none;
+        margin: 0 auto;
+    }
+}
+
+.logos {
+    padding: 40px 0;
+    border-bottom: 1px solid #cccccc;
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .logo {
+        text-align: center;
+        img {
+            width: 100%;
+            max-width: 110px;
+            transition: transform .2s;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+}
+
+@media (max-width: 986px) {
+    .happy-clients blockquote {
+         width: 80%;
+    }
+}
+
+@media (max-width: 660px) {
+    .happy-clients blockquote {
+        width: 100%;
+        font-size: 12px;
+        padding: 0;
+    }
+}
+
